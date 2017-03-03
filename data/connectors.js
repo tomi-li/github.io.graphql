@@ -27,7 +27,8 @@ const PostModel = db.define('post', {
 AuthorModel.hasMany(PostModel);
 PostModel.belongsTo(AuthorModel);
 
-// db.sync({ force: true }).then(() => {
+db.sync({ force: true });
+//     .then(() => {
 //     _.times(10, () => {
 //         return AuthorModel.create({
 //             firstName: casual.first_name,
